@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adb-fastboot-gui-app", "adb-fastboot-gui-app\adb-fastboot-gui-app.csproj", "{3AF81D60-CE51-4C2C-AACF-701EE05B1772}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AF81D60-CE51-4C2C-AACF-701EE05B1772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF81D60-CE51-4C2C-AACF-701EE05B1772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF81D60-CE51-4C2C-AACF-701EE05B1772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF81D60-CE51-4C2C-AACF-701EE05B1772}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C139BAF-1C81-4023-A3D0-3967883B263D}
+	EndGlobalSection
+EndGlobal
