@@ -29,7 +29,7 @@ namespace adb_fastboot_gui_app
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,15 +42,16 @@ namespace adb_fastboot_gui_app
                 process.Start();
                 string output = process.StandardOutput.ReadToEnd();
                 string delete = output.Substring(0, output.Length - 34);
-                string raw_device_name = delete.Substring(78);
+                string raw_device_name = delete.Substring(26);
                 string real = raw_device_name.Replace("_", " ");
-                string realreal = real.ToUpper();
-                device_name_label.Text = realreal;
+                device_name_label.Text = real;
+                textBox1.Text = real;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }
