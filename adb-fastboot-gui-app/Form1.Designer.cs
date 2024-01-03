@@ -33,29 +33,30 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.device_name_label = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.freeram_label = new System.Windows.Forms.Label();
+            this.freeram_progressbar = new System.Windows.Forms.ProgressBar();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.freeram_progressbar = new System.Windows.Forms.ProgressBar();
-            this.freeram_label = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(13, 190);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(234, 36);
@@ -106,6 +107,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "INFO";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.device_name_label);
+            this.panel1.Location = new System.Drawing.Point(52, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(167, 28);
+            this.panel1.TabIndex = 11;
+            // 
             // device_name_label
             // 
             this.device_name_label.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -118,10 +127,56 @@
             this.device_name_label.Text = "DEVICE";
             this.device_name_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.freeram_label);
+            this.groupBox4.Controls.Add(this.freeram_progressbar);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(6, 46);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(248, 108);
+            this.groupBox4.TabIndex = 10;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "HARDWARE";
+            // 
+            // freeram_label
+            // 
+            this.freeram_label.AutoSize = true;
+            this.freeram_label.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.freeram_label.ForeColor = System.Drawing.Color.White;
+            this.freeram_label.Location = new System.Drawing.Point(60, 46);
+            this.freeram_label.Name = "freeram_label";
+            this.freeram_label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.freeram_label.Size = new System.Drawing.Size(28, 15);
+            this.freeram_label.TabIndex = 9;
+            this.freeram_label.Text = "---";
+            this.freeram_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // freeram_progressbar
+            // 
+            this.freeram_progressbar.Location = new System.Drawing.Point(60, 25);
+            this.freeram_progressbar.Name = "freeram_progressbar";
+            this.freeram_progressbar.Size = new System.Drawing.Size(181, 18);
+            this.freeram_progressbar.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(6, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 18);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "RAM :";
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.groupBox6);
+            this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(14, 11);
@@ -144,81 +199,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CONSOLE";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(176, 309);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 177);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // groupBox4
+            // button2
             // 
-            this.groupBox4.Controls.Add(this.freeram_label);
-            this.groupBox4.Controls.Add(this.freeram_progressbar);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(6, 46);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(248, 108);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "HARDWARE";
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(7, 66);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(234, 36);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Device Prop";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // groupBox5
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(6, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 18);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "RAM :";
+            this.groupBox5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(6, 25);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(230, 374);
+            this.groupBox5.TabIndex = 12;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "FASTBOOT";
             // 
-            // panel1
+            // groupBox6
             // 
-            this.panel1.Controls.Add(this.device_name_label);
-            this.panel1.Location = new System.Drawing.Point(52, 17);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(167, 28);
-            this.panel1.TabIndex = 11;
-            // 
-            // freeram_progressbar
-            // 
-            this.freeram_progressbar.Location = new System.Drawing.Point(60, 25);
-            this.freeram_progressbar.Name = "freeram_progressbar";
-            this.freeram_progressbar.Size = new System.Drawing.Size(181, 18);
-            this.freeram_progressbar.TabIndex = 8;
-            // 
-            // freeram_label
-            // 
-            this.freeram_label.AutoSize = true;
-            this.freeram_label.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.freeram_label.ForeColor = System.Drawing.Color.White;
-            this.freeram_label.Location = new System.Drawing.Point(57, 46);
-            this.freeram_label.Name = "freeram_label";
-            this.freeram_label.Size = new System.Drawing.Size(28, 15);
-            this.freeram_label.TabIndex = 9;
-            this.freeram_label.Text = "---";
-            this.freeram_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.groupBox6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.Location = new System.Drawing.Point(244, 25);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(230, 374);
+            this.groupBox6.TabIndex = 13;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "ADB";
             // 
             // Form1
             // 
@@ -227,18 +244,20 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(828, 501);
+            this.MinimumSize = new System.Drawing.Size(828, 501);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -252,14 +271,15 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label device_name_label;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ProgressBar freeram_progressbar;
         private System.Windows.Forms.Label freeram_label;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }
 
